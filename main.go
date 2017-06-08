@@ -12,7 +12,13 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
+	config, err := hclParser(string(b))
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 
-	fmt.Println(string(b))
+	fmt.Println(config.Option, config.Instance, config.Dns)
+
 	os.Exit(0)
 }
