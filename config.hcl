@@ -1,9 +1,9 @@
 option {
   rollback = true
   security_group = [
-    "sg-000001",
-    "sg-000002"
-  ]
+   "sg-000001",
+   "sg-000002"
+ ]
 }
 
 instance {
